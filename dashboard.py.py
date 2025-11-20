@@ -13,11 +13,11 @@ st.set_page_config(page_title="Netflix Dashboard", layout="wide")
 st.title("📺 Netflix Movies & TV Shows Dashboard")
 
 # Load public dataset directly from GitHub
-DATA_URL = "https://raw.githubusercontent.com/thinkingmachines/datasets/master/netflix_titles/netflix_titles.csv"
+DATA_URL = "https://raw.githubusercontent.com/USERNAME/REPO/main/netflix_titles.csv"
 
 @st.cache_data
 def load_data():
-    return pd.read_csv(DATA_URL)
+    return pd.read_csv("https://raw.githubusercontent.com/USERNAME/REPO/main/netflix_titles.csv")
 
 df = load_data()
 
